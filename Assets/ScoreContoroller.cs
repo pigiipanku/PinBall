@@ -19,15 +19,15 @@ public class ScoreContoroller : MonoBehaviour {
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (tag == "SmallStarTag")
+        if (collision.gameObject.tag == "SmallStarTag")
         {
             sss += 810;
         }
-        else if (tag == "LargeStarTag")
+        else if( collision.gameObject.tag == "LargeStarTag")
         {
             sss += 1919;
         }
-        else if (tag == "SmallCloudTag" || tag == "LargeCloudTag")
+        else if (collision.gameObject.tag == "SmallCloudTag" || collision.gameObject.tag == "LargeCloudTag")
         {
             sss += 114514;
         }
